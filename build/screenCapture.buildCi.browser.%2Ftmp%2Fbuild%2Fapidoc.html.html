@@ -1,0 +1,169 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/sindresorhus/multimatch">multimatch (v2.1.0)</a>
+</h1>
+<h4>Extends minimatch.match() with support for multiple patterns</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multimatch">module multimatch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multimatch.multimatch">
+            function <span class="apidocSignatureSpan"></span>multimatch
+            <span class="apidocSignatureSpan">(list, patterns, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multimatch.toString">
+            function <span class="apidocSignatureSpan">multimatch.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.multimatch.toString">module multimatch.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.multimatch.toString.toString">
+            function <span class="apidocSignatureSpan">multimatch.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multimatch" id="apidoc.module.multimatch">module multimatch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multimatch.multimatch" id="apidoc.element.multimatch.multimatch">
+        function <span class="apidocSignatureSpan"></span>multimatch
+        <span class="apidocSignatureSpan">(list, patterns, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">multimatch = function (list, patterns, options) {
+	list = arrify(list);
+	patterns = arrify(patterns);
+
+	if (list.length === 0 || patterns.length === 0) {
+		return [];
+	}
+
+	options = options || {};
+
+	return patterns.reduce(function (ret, pattern) {
+		var process = arrayUnion;
+
+		if (pattern[0] === '!') {
+			pattern = pattern.slice(1);
+			process = arrayDiffer;
+		}
+
+		return process(ret, minimatch.match(list, pattern, options));
+	}, []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.multimatch.toString" id="apidoc.element.multimatch.toString">
+        function <span class="apidocSignatureSpan">multimatch.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.multimatch.toString" id="apidoc.module.multimatch.toString">module multimatch.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.multimatch.toString.toString" id="apidoc.element.multimatch.toString.toString">
+        function <span class="apidocSignatureSpan">multimatch.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
