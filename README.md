@@ -1,4 +1,7 @@
-# api documentation for  [multimatch (v2.1.0)](https://github.com/sindresorhus/multimatch)  [![npm package](https://img.shields.io/npm/v/npmdoc-multimatch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-multimatch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-multimatch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-multimatch)
+# npmdoc-multimatch
+
+#### basic api documentation for  [multimatch (v2.1.0)](https://github.com/sindresorhus/multimatch)  [![npm package](https://img.shields.io/npm/v/npmdoc-multimatch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-multimatch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-multimatch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-multimatch)
+
 #### Extends minimatch.match() with support for multiple patterns
 
 [![NPM](https://nodei.co/npm/multimatch.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/multimatch)
@@ -77,7 +80,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "2.1.0"
+    "version": "2.1.0",
+    "bin": {}
 }
 ```
 
